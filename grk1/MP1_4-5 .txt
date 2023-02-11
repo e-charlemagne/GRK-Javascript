@@ -1,0 +1,42 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.js">
+</script>
+
+<script>
+  function setup() {
+    createCanvas(800, 600);
+    noLoop();
+    //frameRate(25);
+  }
+
+  function draw() {
+
+    //noprotect 
+    background("skyblue");
+   
+    for (y = 400; y <height; y++)
+      for (x = 0; x < width; x++) {
+      set(x,y,color("darkgreen"));
+      }
+      
+      for(y = 200; y < 400;y++)
+        for(x = 250;x<550;x++){
+        set(x,y,color("brown"));
+        }
+      for( y = 50 , w = 0; y < 200;y++,w+=2)
+      	for(x = 400-w ; x < 400 + w ; x++){
+        set(x,y,color("pink"));
+        }
+       
+      
+         /*   for(y=100/2,w=0; y<250; y++,w+=2)
+                       for(x =500-w ; x < 400 ; x++){
+                         set(x,y,color("pink"));
+                   } */
+        
+     
+      
+      
+    updatePixels();
+  }
+
+</script>
